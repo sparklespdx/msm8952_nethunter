@@ -1,0 +1,3 @@
+[submodule "android_kernel_motorola_msm8952"]
+	path = android_kernel_motorola_msm8952
+	url = git@github.com:sparklespdx/android_kernel_motorola_msm8952.git
