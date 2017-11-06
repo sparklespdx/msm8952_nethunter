@@ -36,8 +36,11 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
 
   # Installs build dependencies and prepares environment
-  config.vm.provision "shell", inline: <<-SHELL
-    sh /vagrant/provision.sh
-    sh /vagrant/get_sources.sh
-  SHELL
+  # config.vm.provision "shell", inline: <<-SHELL
+  #   sh /vagrant/provision.sh
+  #   sh /vagrant/get_sources.sh
+  # SHELL
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "provision.yml"
+  end
 end
